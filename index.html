@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EMI Calculator</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <div class="container">
+    <div class="toggle-container">
+      <label class="switch">
+        <input type="checkbox" id="darkToggle">
+        <span class="slider round"></span>
+      </label>
+      <span class="toggle-label">Dark Theme</span>
+    </div>
+
+    <h2>EMI Calculator</h2>
+
+    <input type="number" id="principal" placeholder="Loan Amount (₹)">
+    <input type="number" id="rate" placeholder="Interest Rate (Annual %)">
+    <input type="number" id="tenure" placeholder="Loan Tenure (Months)">
+
+    <select id="chartLanguage">
+      <option value="en">English</option>
+      <option value="hi">Hindi</option>
+      <option value="bn">Bengali</option>
+      <option value="as">Assamese</option>
+    </select>
+
+    <button id="calculateBtn">Calculate EMI</button>
+
+    <div id="resultContainer" class="card-container"></div>
+    <div id="downloadArea"></div>
+
+    <canvas id="pieChart" width="300" height="300"></canvas>
+    <canvas id="monthlyChart" width="400" height="300"></canvas>
+
+    <div id="shareContainer" class="share-buttons">
+      <span>Share with Friends:</span>
+      <a href="#" id="shareEmail" class="share-btn email" title="Email" target="_blank"><i class="fas fa-envelope"></i></a>
+      <a href="#" id="shareWhatsapp" class="share-btn whatsapp" title="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="#" id="shareFacebook" class="share-btn facebook" title="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" id="shareX" class="share-btn x" title="X (Twitter)" target="_blank"><i class="fab fa-x-twitter"></i></a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
