@@ -64,7 +64,6 @@ document.getElementById('calculateBtn').addEventListener('click', () => {
   updatePieChart(principal, interestAmount, language);
   const emiData = updateMonthlyChart(tenure, principal, interestAmount, emi, rate, language);
   addDownloadButton(tenure, principal, interestAmount, emiData, language);
-
   updateSharingLinks(principal, interestAmount, totalPayment, emi);
 });
 
@@ -151,18 +150,28 @@ function generatePDF(tenure, principal, interestAmount, emiData, language) {
 document.getElementById('darkToggle').addEventListener('change', function () {
   const isDark = this.checked;
   document.body.classList.toggle('dark-mode', isDark);
-  const calculateBtn = document.getElementById('calculateBtn');
-  calculateBtn.classList.toggle('dark-mode-btn', isDark);
+  document.getElementById('calculateBtn').classList.toggle('dark-mode-btn', isDark);
+  document.getElementById('resetBtn').classList.toggle('dark-mode-reset', isDark);
 });
 
 function updateSharingLinks(principal, interest, total, emi) {
-  const shareText = encodeURIComponent(
-    `Check out my EMI calculation:\nLoan: ₹${principal}\nEMI: ₹${emi}\nInterest: ₹${interest}\nTotal: ₹${total}`
+  const userMessage = encodeURIComponent(
+    `Try this amazing EMI Calculator to plan your loans smartly!\n\nLoan: ₹${principal}\nEMI: ₹${emi}\nInterest: ₹${interest}\nTotal: ₹${total}`
   );
-  const pageUrl = encodeURIComponent(window.location.href);
+  const pageUrl = encodeURIComponent("https://your-emicalculator-link.com");
 
-  document.getElementById('shareEmail').href = `mailto:?subject=EMI Calculation&body=${shareText}`;
-  document.getElementById('shareWhatsapp').href = `https://wa.me/?text=${shareText}`;
-  document.getElementById('shareFacebook').href = `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}&quote=${shareText}`;
-  document.getElementById('shareX').href = `https://twitter.com/intent/tweet?text=${shareText}&url=${pageUrl}`;
+  document.getElementById('shareEmail').href = `mailto:?subject=EMI Calculator&body=${userMessage}%0A%0ACheck it out here: ${pageUrl}`;
+  document.getElementById('shareWhatsapp').href = `https://wa.me/?text=${userMessage}%0A%0ACheck it out here: ${pageUrl}`;
+  document.getElementById('shareFacebook').href = `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}&quote=${userMessage}`;
+  document.getElementById('shareX').href = `https://twitter.com/intent/tweet?text=${userMessage}&url=${pageUrl}`;
 }
+
+document.getElementById('resetBtn').addEventListener('click', () => {
+  document.getElementById('principal').value = '';
+  document.getElementById('rate').value = '';
+  document.getElementById('tenure').value = '';
+  document.getElementById('resultContainer').innerHTML = '';
+  document.getElementById('downloadArea').innerHTML = '';
+  if (pieChartInstance) pieChartInstance.destroy();
+  if (monthlyChartInstance) monthlyChartInstance.destroy();
+});
