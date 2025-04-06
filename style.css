@@ -217,12 +217,12 @@ input:checked + .slider:before {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 10px;
-  font-size: 18px;
+  padding: 8px;
+  font-size: 16px; /* Reduced from 18px */
   border-radius: 50%;
   color: white;
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   transition: transform 0.3s;
 }
 
@@ -301,6 +301,29 @@ input:checked + .slider:before {
   color: white;
 }
 
+/* Footer nav styles for About, FAQ, Prepayment Calculator */
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  font-size: 16px;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.footer-nav a:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 600px) {
   .card-container {
     flex-direction: column;
@@ -335,5 +358,11 @@ input:checked + .slider:before {
   .prepay-link {
     padding: 10px 16px;
     font-size: 15px;
+  }
+
+  .footer-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
   }
 }
