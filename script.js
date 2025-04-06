@@ -158,7 +158,7 @@ function updateSharingLinks(principal, interest, total, emi) {
   const userMessage = encodeURIComponent(
     `Try this amazing EMI Calculator to plan your loans smartly!\n\nLoan: ₹${principal}\nEMI: ₹${emi}\nInterest: ₹${interest}\nTotal: ₹${total}`
   );
-  const pageUrl = encodeURIComponent("https://your-emicalculator-link.com");
+  const pageUrl = encodeURIComponent("https://ac-27.github.io/loanemicalculator/");
 
   document.getElementById('shareEmail').href = `mailto:?subject=EMI Calculator&body=${userMessage}%0A%0ACheck it out here: ${pageUrl}`;
   document.getElementById('shareWhatsapp').href = `https://wa.me/?text=${userMessage}%0A%0ACheck it out here: ${pageUrl}`;
