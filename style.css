@@ -217,12 +217,12 @@ input:checked + .slider:before {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 8px;
-  font-size: 16px; /* Reduced from 18px */
+  padding: 6px;
+  font-size: 14px;
   border-radius: 50%;
   color: white;
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   transition: transform 0.3s;
 }
 
@@ -263,7 +263,7 @@ input:checked + .slider:before {
 
 .dark-mode .blog-link:hover {
   background-color: #1e90ff;
-  color: #fff;
+  color: white;
 }
 
 /* Stylish Prepayment Calculator Link */
@@ -324,6 +324,7 @@ input:checked + .slider:before {
   text-decoration: underline;
 }
 
+/* Responsive adjustments */
 @media (max-width: 600px) {
   .card-container {
     flex-direction: column;
@@ -353,6 +354,12 @@ input:checked + .slider:before {
     flex-direction: row;
     justify-content: center;
     gap: 10px;
+  }
+
+  .share-btn {
+    width: 26px;
+    height: 26px;
+    font-size: 12px;
   }
 
   .prepay-link {
