@@ -56,10 +56,21 @@ document.getElementById('calculateBtn').addEventListener('click', () => {
   const interestAmount = totalPayment - principal;
 
   document.getElementById('resultContainer').innerHTML = `
-    <div class="card"><h3>${translations[language].emi}</h3><p>₹${emi}</p></div>
-    <div class="card"><h3>${translations[language].totalInterest}</h3><p>₹${interestAmount}</p></div>
-    <div class="card"><h3>${translations[language].totalPayment}</h3><p>₹${totalPayment}</p></div>
+    <div class="card">
+      <h3 class="result-title emi-title">${translations[language].emi}</h3>
+      <p class="amount emi-amount">₹${emi}</p>
+    </div>
+    <div class="card">
+      <h3 class="result-title interest-title">${translations[language].totalInterest}</h3>
+      <p class="amount interest-amount">₹${interestAmount}</p>
+    </div>
+    <div class="card">
+      <h3 class="result-title payment-title">${translations[language].totalPayment}</h3>
+      <p class="amount payment-amount">₹${totalPayment}</p>
+    </div>
   `;
+
+  applyDarkModeStyling(); // Ensure colors are correct even if dark mode was already on
 
   updatePieChart(principal, interestAmount, language);
   const emiData = updateMonthlyChart(tenure, principal, interestAmount, emi, rate, language);
@@ -147,12 +158,33 @@ function generatePDF(tenure, principal, interestAmount, emiData, language) {
   pdf.save("EMI_Chart.pdf");
 }
 
-document.getElementById('darkToggle').addEventListener('change', function () {
-  const isDark = this.checked;
+document.getElementById('darkToggle').addEventListener('change', () => {
+  const isDark = document.getElementById('darkToggle').checked;
   document.body.classList.toggle('dark-mode', isDark);
   document.getElementById('calculateBtn').classList.toggle('dark-mode-btn', isDark);
   document.getElementById('resetBtn').classList.toggle('dark-mode-reset', isDark);
+  applyDarkModeStyling();
 });
+
+function applyDarkModeStyling() {
+  const isDark = document.getElementById('darkToggle').checked;
+
+  const emiTitle = document.querySelector('.emi-title');
+  const interestTitle = document.querySelector('.interest-title');
+  const paymentTitle = document.querySelector('.payment-title');
+
+  const emiAmount = document.querySelector('.emi-amount');
+  const interestAmount = document.querySelector('.interest-amount');
+  const paymentAmount = document.querySelector('.payment-amount');
+
+  if (emiTitle) emiTitle.style.color = isDark ? '#00e5ff' : '';
+  if (interestTitle) interestTitle.style.color = isDark ? '#ffeb3b' : '';
+  if (paymentTitle) paymentTitle.style.color = isDark ? '#76ff03' : '';
+
+  if (emiAmount) emiAmount.style.color = isDark ? '#00e5ff' : '';
+  if (interestAmount) interestAmount.style.color = isDark ? '#ffeb3b' : '';
+  if (paymentAmount) paymentAmount.style.color = isDark ? '#76ff03' : '';
+}
 
 function updateSharingLinks(principal, interest, total, emi) {
   const userMessage = encodeURIComponent(
