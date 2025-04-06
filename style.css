@@ -125,6 +125,7 @@ canvas {
   display: flex;
   align-items: center;
   gap: 8px;
+  z-index: 10;
 }
 
 .switch {
@@ -234,6 +235,37 @@ input:checked + .slider:before {
 .share-btn.facebook { background-color: #3b5998; }
 .share-btn.x { background-color: #000000; }
 
+.blog-link {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #007bff;
+  background-color: #fff;
+  padding: 6px 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease;
+  z-index: 10;
+}
+
+.blog-link:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.dark-mode .blog-link {
+  background-color: #333;
+  color: #1e90ff;
+}
+
+.dark-mode .blog-link:hover {
+  background-color: #1e90ff;
+  color: #fff;
+}
+
 @media (max-width: 600px) {
   .card-container {
     flex-direction: column;
@@ -245,6 +277,13 @@ input:checked + .slider:before {
     top: 8px;
     left: 8px;
     scale: 0.9;
+  }
+
+  .blog-link {
+    top: 8px;
+    right: 10px;
+    font-size: 14px;
+    padding: 5px 10px;
   }
 
   canvas {
