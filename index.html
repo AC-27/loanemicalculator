@@ -9,7 +9,40 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  
   <style>
+    /* Welcome Section Styling */
+    .welcome-section {
+      text-align: center;
+      padding: 50px 20px 20px;
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      border-radius: 0 0 30px 30px;
+      margin-bottom: 30px;
+      animation: fadeIn 2s ease-in;
+    }
+
+    .welcome-section h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    .typing-animation {
+      font-size: 1.5em;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid white;
+      width: 24ch;
+      margin: 0 auto;
+      min-height: 40px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
     .footer-nav {
       display: flex;
       justify-content: center;
@@ -33,7 +66,7 @@
     }
 
     .share-buttons .share-btn i {
-      font-size: 18px !important; /* Slightly reduced icon size */
+      font-size: 18px !important;
     }
 
     @media (max-width: 500px) {
@@ -49,6 +82,13 @@
 
   <!-- Blog link -->
   <a href="blog.html" class="blog-link">Blog</a>
+
+  <!-- Welcome Section Start -->
+  <section class="welcome-section">
+    <h1>Welcome to the easiest EMI Calculator!</h1>
+    <h2><span class="typing-animation" id="typingText"></span></h2>
+  </section>
+  <!-- Welcome Section End -->
 
   <div class="container">
     <div class="toggle-container">
@@ -100,6 +140,33 @@
       <a href="prepayment.html"><i class="fas fa-calculator"></i> Prepayment Calculator</a>
     </div>
   </footer>
+
+  <!-- Typing Animation Script -->
+  <script>
+    const text = "Plan Smart. Pay Smart.";
+    const typingText = document.getElementById("typingText");
+
+    let index = 0;
+    let isDeleting = false;
+
+    function type() {
+      let currentText = text.substring(0, index);
+      typingText.textContent = currentText;
+
+      if (!isDeleting && index < text.length) {
+        index++;
+        setTimeout(type, 150);
+      } else if (isDeleting && index > 0) {
+        index--;
+        setTimeout(type, 100);
+      } else {
+        isDeleting = !isDeleting;
+        setTimeout(type, 1000);
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", type);
+  </script>
 
   <script src="script.js"></script>
 </body>
