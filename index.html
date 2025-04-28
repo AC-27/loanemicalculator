@@ -2,14 +2,38 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>EMI Calculator</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta Tags -->
+  <title>Loan EMI Calculator | Free Online EMI Calculator for Home, Car, Personal Loan</title>
+  <meta name="description" content="Use our free Loan EMI Calculator to easily calculate your monthly EMI for home loans, car loans, and personal loans. Accurate, simple, and fast results.">
+  <meta name="keywords" content="Loan EMI Calculator, Home Loan EMI, Car Loan EMI, Personal Loan EMI, EMI Calculation, Loan Repayment Calculator">
+  <meta name="author" content="AC-27">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph Meta Tags (for Social Media Sharing) -->
+  <meta property="og:title" content="Loan EMI Calculator | Calculate EMI Online">
+  <meta property="og:description" content="Fast and free EMI calculator for Home, Car, and Personal Loans. Get your EMI in seconds!">
+  <meta property="og:url" content="https://ac-27.github.io/loanemicalculator/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://ac-27.github.io/loanemicalculator/assets/images/emi-thumbnail.png">
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Loan EMI Calculator | Free and Accurate Online Tool">
+  <meta name="twitter:description" content="Calculate your Home Loan, Car Loan, and Personal Loan EMI quickly with our free EMI Calculator.">
+  <meta name="twitter:image" content="https://ac-27.github.io/loanemicalculator/assets/images/emi-thumbnail.png">
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://ac-27.github.io/loanemicalculator/favicon.ico" type="image/x-icon">
+
+  <!-- External Styles and Scripts -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-  
+
   <style>
     /* Welcome Section Styling */
     .welcome-section {
@@ -79,6 +103,7 @@
       }
     }
   </style>
+
 </head>
 <body>
 
@@ -93,6 +118,8 @@
   <!-- Welcome Section End -->
 
   <div class="container">
+
+    <!-- Dark Mode Toggle -->
     <div class="toggle-container">
       <label class="switch">
         <input type="checkbox" id="darkToggle">
@@ -101,6 +128,7 @@
       <span class="toggle-label">Dark Theme</span>
     </div>
 
+    <!-- EMI Calculator Form -->
     <h2>EMI Calculator</h2>
 
     <input type="number" id="principal" placeholder="Loan Amount (₹)">
@@ -114,17 +142,20 @@
       <option value="as">Assamese</option>
     </select>
 
+    <!-- Buttons -->
     <div class="btn-group">
       <button id="calculateBtn">Calculate EMI</button>
       <button id="resetBtn">Reset</button>
     </div>
 
+    <!-- Result and Charts -->
     <div id="resultContainer" class="card-container"></div>
     <div id="downloadArea"></div>
 
     <canvas id="pieChart" width="300" height="300"></canvas>
     <canvas id="monthlyChart" width="400" height="300"></canvas>
 
+    <!-- Social Share Buttons -->
     <div id="shareContainer" class="share-buttons">
       <span>Share with Friends:</span>
       <a href="#" id="shareEmail" class="share-btn email" title="Email" target="_blank"><i class="fas fa-envelope"></i></a>
@@ -132,17 +163,18 @@
       <a href="#" id="shareFacebook" class="share-btn facebook" title="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
       <a href="#" id="shareX" class="share-btn x" title="X (Twitter)" target="_blank"><i class="fab fa-x-twitter"></i></a>
     </div>
+
   </div>
 
-  <!-- Stylish Footer navigation -->
- <footer>
-  <div class="footer-nav">
-    <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
-    <a href="faq.html"><i class="fas fa-question-circle"></i> FAQ</a>
-    <a href="prepayment.html"><i class="fas fa-calculator"></i> Prepayment Calculator</a>
-    <a href="goal-calculator/goal.html" target="_blank"><i class="fas fa-bullseye"></i> Goal Calculator</a>
-  </div>
-</footer>
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-nav">
+      <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+      <a href="faq.html"><i class="fas fa-question-circle"></i> FAQ</a>
+      <a href="prepayment.html"><i class="fas fa-calculator"></i> Prepayment Calculator</a>
+      <a href="goal-calculator/goal.html" target="_blank"><i class="fas fa-bullseye"></i> Goal Calculator</a>
+    </div>
+  </footer>
 
   <!-- Typing Animation Script -->
   <script>
@@ -171,6 +203,8 @@
     document.addEventListener("DOMContentLoaded", type);
   </script>
 
+  <!-- Main Calculator Script -->
   <script src="script.js"></script>
+
 </body>
 </html>
