@@ -1,154 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>EMI Calculator Blog</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f5f5f5;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    header {
-      background: #6200ea;
-      color: white;
-      padding: 1rem;
-      text-align: center;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: 2rem auto;
-      background: white;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.1);
-    }
-
-    h1, h2, h3 {
-      color: #6200ea;
-    }
-
-    img {
-      max-width: 100%;
-      border-radius: 8px;
-      margin: 1rem 0;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 2rem;
-    }
-
-    table, th, td {
-      border: 1px solid #ccc;
-    }
-
-    th, td {
-      padding: 0.75rem;
-      text-align: left;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: #eee;
-      margin-top: 3rem;
-      font-size: 0.9rem;
-    }
-
-    @media (max-width: 600px) {
-      .container {
-        padding: 1rem;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Loan EMI Calculator</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">Loan EMI Calculator</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+        </ul>
+    </nav>
 
-  <header>
-    <h1>📊 EMI Calculator – Simplify Your Loan Planning</h1>
-  </header>
+    <!-- Blog Container -->
+    <div class="blog-container">
+        <!-- Blog Post Cards -->
+        <div class="blog-card">
+            <img src="thumbnail1.jpg" alt="Article 1">
+            <h3>How to Calculate Your EMI</h3>
+            <p class="excerpt">EMI (Equated Monthly Installment) is a fixed payment amount made by a borrower to a lender at a specified date each calendar month...</p>
+            <a href="article1.html" class="read-more">Read More</a>
+        </div>
 
-  <div class="container">
-    <p>When planning to take a loan—whether for a home, car, education, or any personal need—knowing how much you’ll pay each month is crucial. That’s where our <strong>EMI Calculator</strong> steps in as your smart financial companion.</p>
+        <div class="blog-card">
+            <img src="thumbnail2.jpg" alt="Article 2">
+            <h3>Understanding Loan Interest Rates</h3>
+            <p class="excerpt">Loan interest rates play a vital role in determining how much you will end up paying for a loan. Let's break it down...</p>
+            <a href="article2.html" class="read-more">Read More</a>
+        </div>
 
-    <h2>✨ Why Use an EMI Calculator?</h2>
-    <ul>
-      <li>🔹 Precise EMI Amounts</li>
-      <li>🔹 Total Interest Payable</li>
-      <li>🔹 Total Payment (Principal + Interest)</li>
-      <li>🔹 Easy-to-understand Charts</li>
-    </ul>
+        <div class="blog-card">
+            <img src="thumbnail3.jpg" alt="Article 3">
+            <h3>5 Tips for Saving Money on Your Loan</h3>
+            <p class="excerpt">Learn how you can save money on your loan by understanding your EMI structure and opting for better loan conditions...</p>
+            <a href="article3.html" class="read-more">Read More</a>
+        </div>
 
-    <h2>📱 Sleek, Mobile-Friendly Design</h2>
-    <img src="Screenshot_20250406-155618.Chrome.png" alt="EMI Calculator UI" />
-
-    <h2>🌙 Dark Mode for Night Owls</h2>
-    <img src="Screenshot_20250406-155831.Chrome~2.png" alt="Dark Mode" />
-
-    <h2>📊 Interactive Pie & Bar Charts</h2>
-    <img src="Screenshot_20250406-155855.Chrome.png" alt="Charts" />
-
-    <h2>📁 Download EMI Chart as PDF</h2>
-    <img src="Screenshot_20250406-155831.Chrome~2.png" alt="PDF Download" />
-
-    <h2>📤 Share with Friends Easily</h2>
-    <img src="Screenshot_20250406-155920.Chrome.png" alt="Sharing Options" />
-
-    <h2>✅ Key Features at a Glance</h2>
-    <table>
-      <tr><th>Feature</th><th>Description</th></tr>
-      <tr><td>📱 Mobile-Optimized</td><td>Works smoothly on smartphones and tablets</td></tr>
-      <tr><td>🌙 Dark Mode</td><td>Toggle for eye-friendly night calculations</td></tr>
-      <tr><td>📈 Pie & Bar Charts</td><td>Visual breakdown of EMI components</td></tr>
-      <tr><td>📁 PDF Download</td><td>Download EMI chart for record-keeping</td></tr>
-      <tr><td>🔁 Reset Button</td><td>Instantly clear inputs for a new calculation</td></tr>
-      <tr><td>📤 Social Sharing</td><td>Share EMI details via WhatsApp, Email, Facebook, X</td></tr>
-      <tr><td>🌍 Multi-language Support</td><td>Switch languages easily</td></tr>
-    </table>
-
-    <h2>🎯 Final Thoughts</h2>
-    <p>This EMI Calculator isn’t just another tool—it’s a complete digital companion for anyone managing loans. From planning to presentation, it ensures you're <strong>informed, organized, and ready to act</strong>.</p>
-
-    <p><strong>Ready to give it a try?</strong> Use the calculator now and take the guesswork out of your loan planning!</p>
-  </div>
-
-  <footer>
-  <div class="footer-container">
-    <!-- Footer Navigation Links -->
-    <div class="footer-nav">
-      <a href="index.html"><i class="fas fa-home"></i> Home</a>
-      <a href="goal-calculator/goal.html"><i class="fas fa-bullseye"></i> Goal Calculator</a>
-      <a href="prepayment.html"><i class="fas fa-calculator"></i> Prepayment Calculator</a>
-      <a href="blog.html"><i class="fas fa-pencil-alt"></i> Blog</a>
-      <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
-      <a href="faq.html"><i class="fas fa-question-circle"></i> FAQ</a>
+        <!-- Pagination / Load More Button -->
+        <div class="pagination">
+            <button class="load-more">Load More</button>
+        </div>
     </div>
 
-    <!-- Social Media Links -->
-    <div class="footer-social">
-      <a href="#" target="_blank" class="footer-icon"><i class="fab fa-facebook-f"></i></a>
-      <a href="#" target="_blank" class="footer-icon"><i class="fab fa-whatsapp"></i></a>
-      <a href="#" target="_blank" class="footer-icon"><i class="fab fa-twitter"></i></a>
-      <a href="mailto:youremail@example.com" class="footer-icon"><i class="fas fa-envelope"></i></a>
-    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Loan EMI Calculator. All rights reserved.</p>
+    </footer>
 
-    <!-- Footer Text (Optional) -->
-    <div class="footer-text">
-      <p>&copy; 2025 EMI Calculator | All rights reserved</p>
-    </div>
-  </div>
-</footer>
-
-
+    <script src="scripts.js"></script>
 </body>
 </html>
