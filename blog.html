@@ -1,60 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - Loan EMI Calculator</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog - Loan EMI Calculator | Finance Tips, Loan Guides</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Explore helpful articles on EMI calculation, loan tips, finance guides and much more. Stay financially smart with Loan EMI Calculator blog.">
+  <meta name="keywords" content="Loan EMI Calculator Blog, Finance Tips, Loan Guides, EMI Savings, Interest Rates, Money Management">
+  <meta name="author" content="Loan EMI Calculator">
+
+  <!-- Open Graph for better sharing -->
+  <meta property="og:title" content="Loan EMI Calculator Blog - Finance, Loan Tips">
+  <meta property="og:description" content="Helpful finance articles, EMI guides, loan tips, and smart money management advice.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ac-27.github.io/loanemicalculator/blog.html">
+  <meta property="og:image" content="https://ac-27.github.io/loanemicalculator/thumbnail1.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-F0iQzyIXsR1wYbZk6Kv8VvO5QhKj1UIE7OafhA/" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="logo">
-            <a href="index.html">Loan EMI Calculator</a>
-        </div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-        </ul>
-    </nav>
 
-    <!-- Blog Container -->
-    <div class="blog-container">
-        <!-- Blog Post Cards -->
-        <div class="blog-card">
-            <img src="thumbnail1.jpg" alt="Article 1">
-            <h3>How to Calculate Your EMI</h3>
-            <p class="excerpt">EMI (Equated Monthly Installment) is a fixed payment amount made by a borrower to a lender at a specified date each calendar month...</p>
-            <a href="article1.html" class="read-more">Read More</a>
-        </div>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html">Loan EMI Calculator</a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+    </ul>
+  </nav>
 
-        <div class="blog-card">
-            <img src="thumbnail2.jpg" alt="Article 2">
-            <h3>Understanding Loan Interest Rates</h3>
-            <p class="excerpt">Loan interest rates play a vital role in determining how much you will end up paying for a loan. Let's break it down...</p>
-            <a href="article2.html" class="read-more">Read More</a>
-        </div>
+  <!-- Blog Section -->
+  <main class="blog-container">
 
-        <div class="blog-card">
-            <img src="thumbnail3.jpg" alt="Article 3">
-            <h3>5 Tips for Saving Money on Your Loan</h3>
-            <p class="excerpt">Learn how you can save money on your loan by understanding your EMI structure and opting for better loan conditions...</p>
-            <a href="article3.html" class="read-more">Read More</a>
-        </div>
+    <!-- Blog Post Card 1 -->
+    <article class="blog-card">
+      <img src="thumbnail1.jpg" alt="How to Calculate Your EMI" loading="lazy">
+      <h2>How to Calculate Your EMI</h2>
+      <p class="excerpt">
+        EMI (Equated Monthly Installment) is a fixed payment amount made by a borrower to a lender at a specified date each calendar month...
+      </p>
+      <a href="article1.html" class="read-more" aria-label="Read more about How to Calculate Your EMI">Read More</a>
+    </article>
 
-        <!-- Pagination / Load More Button -->
-        <div class="pagination">
-            <button class="load-more">Load More</button>
-        </div>
+    <!-- Blog Post Card 2 -->
+    <article class="blog-card">
+      <img src="thumbnail2.jpg" alt="Understanding Loan Interest Rates" loading="lazy">
+      <h2>Understanding Loan Interest Rates</h2>
+      <p class="excerpt">
+        Loan interest rates play a vital role in determining how much you will end up paying for a loan. Let's break it down...
+      </p>
+      <a href="article2.html" class="read-more" aria-label="Read more about Understanding Loan Interest Rates">Read More</a>
+    </article>
+
+    <!-- Blog Post Card 3 -->
+    <article class="blog-card">
+      <img src="thumbnail3.jpg" alt="5 Tips for Saving Money on Your Loan" loading="lazy">
+      <h2>5 Tips for Saving Money on Your Loan</h2>
+      <p class="excerpt">
+        Learn how you can save money on your loan by understanding your EMI structure and opting for better loan conditions...
+      </p>
+      <a href="article3.html" class="read-more" aria-label="Read more about 5 Tips for Saving Money on Your Loan">Read More</a>
+    </article>
+
+    <!-- Pagination / Load More -->
+    <div class="pagination">
+      <button class="load-more" aria-label="Load More Articles">Load More</button>
     </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2025 Loan EMI Calculator. All rights reserved.</p>
-    </footer>
+  </main>
 
-    <script src="scripts.js"></script>
+  <!-- Footer Section -->
+  <footer class="footer">
+    <p>&copy; 2025 Loan EMI Calculator. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="scripts.js" defer></script>
+
 </body>
 </html>
