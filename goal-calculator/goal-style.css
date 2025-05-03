@@ -1,50 +1,64 @@
-/* goal-style.css */
-
+/* Base Styles */
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #222;
   margin: 0;
-  padding: 20px;
-  background-color: #f2f2f2;
-  transition: background-color 0.5s, color 0.5s;
+  padding: 0;
+  line-height: 1.6;
 }
 
+h1, h2, h3 {
+  color: #003366;
+  text-align: center;
+  margin: 20px 0 10px;
+}
+
+p {
+  max-width: 700px;
+  margin: 0 auto 20px;
+  padding: 0 15px;
+  font-size: 1rem;
+}
+
+/* Container */
 .goal-container {
-  max-width: 500px;
+  max-width: 800px;
   margin: auto;
   padding: 20px;
-  background: #fff;
-  border-radius: 15px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
 }
 
-h1, h2 {
-  text-align: center;
-  color: #333;
-}
-
+/* Input Group */
 .input-group {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  margin-top: 20px;
+  padding: 15px;
 }
 
-input, select, button {
+.input-group input,
+.input-group select,
+.input-group button {
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 8px;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
-button {
-  background: #007bff;
+.input-group button {
+  background-color: #007bff;
   color: white;
+  border: none;
+  font-weight: bold;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background-color 0.3s ease;
 }
 
-button:hover {
-  background: #0056b3;
+.input-group button:hover {
+  background-color: #0056b3;
 }
 
 .tenure-group {
@@ -52,47 +66,81 @@ button:hover {
   gap: 10px;
 }
 
-.suggestion-card {
-  background: #e0f7fa;
-  margin-top: 20px;
-  padding: 15px;
-  border-radius: 10px;
-  color: #00796b;
-}
-
+/* Progress Section */
 .progress-section {
   margin-top: 30px;
+  text-align: center;
 }
 
 .progress-bar {
   width: 100%;
-  background-color: #ddd;
-  border-radius: 20px;
+  background-color: #e6e6e6;
+  height: 24px;
+  border-radius: 12px;
   overflow: hidden;
-  height: 25px;
+  margin: 15px auto;
 }
 
 .progress-fill {
   height: 100%;
   width: 0%;
-  background: #28a745;
-  text-align: center;
-  color: white;
-  line-height: 25px;
-  transition: width 0.5s;
+  background-color: #28a745;
+  transition: width 1s ease;
 }
 
+/* Internal Links */
+.internal-links {
+  margin-top: 30px;
+  padding: 15px;
+  background-color: #f1f8ff;
+  border: 1px solid #cce5ff;
+  border-radius: 10px;
+}
+
+.internal-links ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.internal-links li {
+  margin: 10px 0;
+}
+
+.internal-links a {
+  color: #0077cc;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.05rem;
+}
+
+.internal-links a:hover {
+  text-decoration: underline;
+}
+
+/* Suggestion Card */
+.suggestion-card {
+  background-color: #fafafa;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+/* Toggle Dark Mode */
 .toggle-container {
-  position: absolute;
-  top: 20px;
-  left: 20px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
 }
 
 .switch {
   position: relative;
   display: inline-block;
   width: 50px;
-  height: 24px;
+  height: 28px;
+  margin-right: 10px;
 }
 
 .switch input {
@@ -103,64 +151,130 @@ button:hover {
 
 .slider {
   position: absolute;
+  cursor: pointer;
   top: 0; left: 0;
   right: 0; bottom: 0;
   background-color: #ccc;
   transition: 0.4s;
-  border-radius: 34px;
+  border-radius: 28px;
 }
 
 .slider:before {
   position: absolute;
   content: "";
-  height: 18px;
-  width: 18px;
-  left: 3px;
-  bottom: 3px;
+  height: 20px; width: 20px;
+  left: 4px;
+  bottom: 4px;
   background-color: white;
-  transition: 0.4s;
   border-radius: 50%;
+  transition: 0.4s;
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #333;
 }
 
 input:checked + .slider:before {
-  transform: translateX(26px);
+  transform: translateX(22px);
 }
 
 .toggle-label {
-  margin-left: 10px;
+  font-size: 1rem;
 }
 
-/* Dark Mode */
+/* Footer */
+footer {
+  background-color: #003366;
+  color: white;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-nav, .footer-social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.footer-nav a, .footer-icon {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.footer-nav a:hover, .footer-icon:hover {
+  text-decoration: underline;
+}
+
+.footer-text p {
+  font-size: 0.9rem;
+}
+
+/* Dark Mode Styles */
 body.dark-mode {
   background-color: #121212;
-  color: #f5f5f5;
+  color: #eee;
 }
 
 body.dark-mode .goal-container {
-  background: #1e1e1e;
+  background-color: #1e1e1e;
+  color: #eee;
 }
 
-body.dark-mode input, 
-body.dark-mode select, 
-body.dark-mode button {
+body.dark-mode .input-group input,
+body.dark-mode .input-group select {
   background-color: #333;
-  color: #f5f5f5;
-  border: 1px solid #555;
+  color: #fff;
+  border: 1px solid #666;
 }
 
-body.dark-mode .progress-bar {
-  background-color: #333;
+body.dark-mode .input-group button {
+  background-color: #28a745;
 }
 
-body.dark-mode .progress-fill {
-  background: #4caf50;
+body.dark-mode .internal-links {
+  background-color: #222;
+  border-color: #444;
+}
+
+body.dark-mode .internal-links a {
+  color: #4ea8ff;
+}
+
+body.dark-mode footer {
+  background-color: #000;
 }
 
 body.dark-mode .suggestion-card {
-  background: #37474f;
-  color: #a7ffeb;
+  background-color: #222;
+  border-color: #444;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .input-group, .goal-container {
+    padding: 10px;
+  }
+
+  .tenure-group {
+    flex-direction: column;
+  }
+
+  .toggle-container {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .footer-nav, .footer-social {
+    flex-direction: column;
+    align-items: center;
+  }
 }
