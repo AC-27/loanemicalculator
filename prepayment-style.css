@@ -3,21 +3,32 @@
   margin: 0;
   padding: 0;
 }
+
 body {
   font-family: 'Segoe UI', sans-serif;
   background: #eef1f5;
   padding: 20px;
   transition: background 0.3s, color 0.3s;
+  line-height: 1.6;
 }
+
 .container {
-  max-width: 700px;
+  max-width: 800px;
   margin: auto;
+  padding: 0 15px;
 }
+
+h1, h2, h3 {
+  color: #2c3e50;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
 h2 {
   text-align: center;
-  color: #333;
-  margin-bottom: 20px;
+  font-size: 28px;
 }
+
 .card {
   background: #fff;
   border-radius: 16px;
@@ -25,12 +36,14 @@ h2 {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   transition: background 0.3s, color 0.3s;
 }
+
 .form label {
   display: block;
   margin-top: 12px;
   font-weight: 600;
   color: #555;
 }
+
 .form input {
   width: 100%;
   padding: 10px;
@@ -39,12 +52,14 @@ h2 {
   border: 1px solid #ccc;
   font-size: 16px;
 }
+
 .button-group {
   display: flex;
   gap: 10px;
   margin-top: 20px;
   flex-wrap: wrap;
 }
+
 button {
   flex: 1;
   background-color: #007bff;
@@ -54,17 +69,21 @@ button {
   border-radius: 8px;
   font-size: 16px;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: background-color 0.3s ease;
 }
+
 button:hover {
   background-color: #0056b3;
 }
+
 .reset-btn {
   background-color: #6a0dad;
 }
+
 .reset-btn:hover {
   background-color: #4b0082;
 }
+
 .result {
   margin-top: 25px;
   background: #f9f9f9;
@@ -72,17 +91,53 @@ button:hover {
   border-radius: 10px;
   border: 1px solid #ddd;
 }
+
 .result p {
   font-size: 16px;
   margin-bottom: 10px;
 }
+
 .chart-container {
   margin-top: 30px;
 }
-.dark-toggle {
-  position: absolute;
-  top: 15px;
-  left: 15px;
+
+/* Footer Styles */
+footer {
+  margin-top: 40px;
+  background: #f0f0f0;
+  padding: 20px 0;
+  font-size: 14px;
+  text-align: center;
+  color: #333;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-nav a,
+.footer-social a {
+  color: #007bff;
+  text-decoration: none;
+  margin: 0 8px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.footer-nav a:hover,
+.footer-social a:hover {
+  color: #0056b3;
+}
+
+.footer-icon i {
+  font-size: 18px;
+}
+
+.footer-text {
+  font-size: 13px;
+  color: #555;
 }
 
 /* Dark Mode */
@@ -90,35 +145,58 @@ body.dark {
   background-color: #121212;
   color: #f0f0f0;
 }
+
 body.dark .card {
   background-color: #1e1e1e;
 }
+
 body.dark .form label {
   color: #ddd;
 }
+
 body.dark .form input {
   background-color: #333;
   color: #fff;
   border: 1px solid #555;
 }
+
 body.dark .result {
   background-color: #2a2a2a;
   border-color: #444;
 }
+
 body.dark button {
   background-color: #28a745;
 }
+
 body.dark button:hover {
   background-color: #218838;
 }
+
 body.dark .reset-btn {
   background-color: #7b1fa2;
 }
+
 body.dark .reset-btn:hover {
   background-color: #6a1b9a;
 }
+
 body.dark #mainHeading {
   color: #ffcc00;
+}
+
+body.dark .footer-text {
+  color: #bbb;
+}
+
+body.dark .footer-nav a,
+body.dark .footer-social a {
+  color: #66b2ff;
+}
+
+body.dark .footer-nav a:hover,
+body.dark .footer-social a:hover {
+  color: #fff;
 }
 
 /* Switch Style */
@@ -128,11 +206,13 @@ body.dark #mainHeading {
   width: 40px;
   height: 22px;
 }
+
 .switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
+
 .slider {
   position: absolute;
   top: 0; left: 0;
@@ -141,20 +221,31 @@ body.dark #mainHeading {
   transition: 0.4s;
   border-radius: 22px;
 }
+
 .slider:before {
   position: absolute;
   content: "";
-  height: 16px; width: 16px;
-  left: 4px; bottom: 3px;
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 3px;
   background-color: white;
   transition: 0.4s;
   border-radius: 50%;
 }
+
 input:checked + .slider {
   background-color: #2196F3;
 }
+
 input:checked + .slider:before {
   transform: translateX(18px);
+}
+
+.dark-toggle {
+  position: absolute;
+  top: 15px;
+  left: 15px;
 }
 
 /* Responsive Design */
@@ -162,7 +253,19 @@ input:checked + .slider:before {
   .button-group {
     flex-direction: column;
   }
+
   button {
     width: 100%;
+  }
+
+  .footer-container {
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-nav,
+  .footer-social {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
