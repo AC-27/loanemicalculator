@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ac-27.github.io/loanemicalculator/sitemap.xml
