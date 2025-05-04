@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Solar Panel Cost Calculator - Save Electricity Bill</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Calculate your solar panel cost and estimate savings on electricity bills in India. Use our solar calculator for accurate savings over time.">
+  <meta name="keywords" content="solar panel calculator, electricity bill savings, solar savings India, solar calculator, rooftop solar cost, solar ROI">
+  <meta name="author" content="AC-27 Projects">
+
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <nav>
+        <a href="https://ac-27.github.io/loanemicalculator/">EMI Calculator</a>
+        <a href="https://ac-27.github.io/loanemicalculator/prepayment">Prepayment Calculator</a>
+        <a href="https://ac-27.github.io/loanemicalculator/goal">Goal Calculator</a>
+      </nav>
+      <label class="dark-toggle">
+        <input type="checkbox" id="darkToggle" />
+        Dark Mode
+      </label>
+      <h1>Solar Panel Cost Calculator</h1>
+      <p>Estimate your savings by switching to solar energy. Enter your details below:</p>
+    </header>
+
+    <form id="calculator-form">
+      <label>
+        Monthly Electricity Bill (₹):
+        <input type="number" id="bill" required />
+      </label>
+
+      <label>
+        Roof Size (sq ft):
+        <input type="number" id="roofSize" required />
+        <span class="tooltip">Estimate roof size as length × width in sq. ft</span>
+      </label>
+
+      <label>
+        Energy Offset (%):
+        <input type="number" id="offset" value="80" required />
+        <span class="tooltip">Offset is the % of your energy needs met by solar</span>
+      </label>
+
+      <label>
+        Location:
+        <select id="location">
+          <option value="north">North India</option>
+          <option value="south">South India</option>
+          <option value="east">East India</option>
+          <option value="west">West India</option>
+        </select>
+      </label>
+
+      <button type="submit">Calculate</button>
+    </form>
+
+    <div class="explanation">
+      <h2>What is Energy Offset?</h2>
+      <p>Energy offset represents the percentage of your electricity usage that will be covered by the solar panel system. For example, an 80% offset means solar will supply 80% of your yearly energy needs.</p>
+    </div>
+
+    <!-- Results -->
+    <div id="results">
+      <h2>Estimation Results</h2>
+      <div class="card-grid">
+        <div class="result-card"><strong>System Size:</strong> <span id="systemSize"></span></div>
+        <div class="result-card"><strong>Total Cost (Before Subsidy):</strong> <span id="totalCost"></span></div>
+        <div class="result-card"><strong>Subsidy:</strong> <span id="subsidy"></span></div>
+        <div class="result-card"><strong>Net Cost (After Subsidy):</strong> <span id="netCost"></span></div>
+        <div class="result-card"><strong>Annual Savings:</strong> ₹<span id="annualSavings"></span></div>
+        <div class="result-card"><strong>Total 25-Year Savings:</strong> ₹<span id="totalSavings"></span></div>
+      </div>
+
+      <canvas id="resultChart" width="600" height="300"></canvas>
+      <button onclick="downloadPDF()">Download PDF</button>
+    </div>
+
+    <!-- SEO Article -->
+    <section class="seo-article">
+      <h2>How This Solar Panel Calculator Helps You Save</h2>
+      <p>Our solar panel cost calculator helps you understand the financial benefits of switching to rooftop solar. By estimating your system size, total cost, subsidies available in your region, and the resulting savings on electricity bills, this tool empowers you to make informed investment decisions in clean energy. Whether you’re from North or South India, this tool is regionally optimized to give realistic returns and payback insights.</p>
+    </section>
+
+    <footer>
+      <a href="https://ac-27.github.io/loanemicalculator/">Home</a> |
+      <a href="https://ac-27.github.io/loanemicalculator/about">About</a> |
+      <a href="https://ac-27.github.io/loanemicalculator/faq">FAQ</a>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
