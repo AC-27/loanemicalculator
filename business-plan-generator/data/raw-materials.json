@@ -1,0 +1,213 @@
+{
+  "rawMaterials": {
+    "bakery": [
+      {
+        "name": "Wheat Flour (kg)",
+        "rate": 35,
+        "quantity_per_unit": 0.5,
+        "wastage_percent": 3,
+        "category": "Flour"
+      },
+      {
+        "name": "Sugar (kg)",
+        "rate": 42,
+        "quantity_per_unit": 0.2,
+        "wastage_percent": 2,
+        "category": "Sweeteners"
+      }
+    ],
+    "dairy": [
+      {
+        "name": "Fresh Milk (liter)",
+        "rate": 50,
+        "quantity_per_unit": 1.2,
+        "wastage_percent": 4,
+        "category": "Dairy"
+      },
+      {
+        "name": "Starter Culture (g)",
+        "rate": 200,
+        "quantity_per_unit": 5,
+        "wastage_percent": 1,
+        "category": "Culture"
+      }
+    ],
+    "pickles": [
+      {
+        "name": "Raw Mango (kg)",
+        "rate": 60,
+        "quantity_per_unit": 1,
+        "wastage_percent": 15,
+        "category": "Produce"
+      },
+      {
+        "name": "Mustard Oil (liter)",
+        "rate": 180,
+        "quantity_per_unit": 0.2,
+        "wastage_percent": 2,
+        "category": "Oil"
+      },
+      {
+        "name": "Spices Mix (kg)",
+        "rate": 400,
+        "quantity_per_unit": 0.1,
+        "wastage_percent": 1,
+        "category": "Seasonings"
+      },
+      {
+        "name": "Glass Jars (units)",
+        "rate": 25,
+        "quantity_per_unit": 1,
+        "wastage_percent": 3,
+        "category": "Packaging"
+      }
+    ],
+    "puffed-rice": [
+      {
+        "name": "Paddy Rice (kg)",
+        "rate": 30,
+        "quantity_per_unit": 0.7,
+        "wastage_percent": 5,
+        "category": "Grains"
+      },
+      {
+        "name": "Edible Oil (liter)",
+        "rate": 120,
+        "quantity_per_unit": 0.05,
+        "wastage_percent": 2,
+        "category": "Fats"
+      },
+      {
+        "name": "Peanuts (kg)",
+        "rate": 120,
+        "quantity_per_unit": 0.1,
+        "wastage_percent": 3,
+        "category": "Nuts"
+      },
+      {
+        "name": "Spices (kg)",
+        "rate": 300,
+        "quantity_per_unit": 0.02,
+        "wastage_percent": 1,
+        "category": "Seasonings"
+      }
+    ],
+    "fruits-veg": [
+      {
+        "name": "Fresh Fruits (kg)",
+        "rate": 60,
+        "quantity_per_unit": 1.5,
+        "wastage_percent": 10,
+        "category": "Produce"
+      }
+    ],
+    "meat": [
+      {
+        "name": "Chicken (kg)",
+        "rate": 180,
+        "quantity_per_unit": 1.1,
+        "wastage_percent": 15,
+        "category": "Meat"
+      }
+    ],
+    "fish": [
+      {
+        "name": "Fresh Fish (kg)",
+        "rate": 250,
+        "quantity_per_unit": 1.2,
+        "wastage_percent": 20,
+        "category": "Seafood"
+      }
+    ],
+    "flour-mill": [
+      {
+        "name": "Wheat Grain (kg)",
+        "rate": 28,
+        "quantity_per_unit": 1.1,
+        "wastage_percent": 2,
+        "category": "Grains"
+      }
+    ],
+    "snacks": [
+      {
+        "name": "Potatoes (kg)",
+        "rate": 25,
+        "quantity_per_unit": 0.3,
+        "wastage_percent": 15,
+        "category": "Produce"
+      }
+    ],
+    "beverages": [
+      {
+        "name": "Fruit Pulp (kg)",
+        "rate": 80,
+        "quantity_per_unit": 0.2,
+        "wastage_percent": 5,
+        "category": "Produce"
+      }
+    ],
+    "spices": [
+      {
+        "name": "Raw Spices (kg)",
+        "rate": 200,
+        "quantity_per_unit": 1,
+        "wastage_percent": 5,
+        "category": "Spices"
+      }
+    ],
+    "oil": [
+      {
+        "name": "Oil Seeds (kg)",
+        "rate": 60,
+        "quantity_per_unit": 3,
+        "wastage_percent": 2,
+        "category": "Seeds"
+      }
+    ],
+    "sweets": [
+      {
+        "name": "Khoya (kg)",
+        "rate": 300,
+        "quantity_per_unit": 0.5,
+        "wastage_percent": 3,
+        "category": "Dairy"
+      }
+    ],
+    "organic": [
+      {
+        "name": "Organic Fruits (kg)",
+        "rate": 120,
+        "quantity_per_unit": 1.2,
+        "wastage_percent": 8,
+        "category": "Produce"
+      }
+    ],
+    "ready-to-eat": [
+      {
+        "name": "Rice (kg)",
+        "rate": 45,
+        "quantity_per_unit": 0.4,
+        "wastage_percent": 3,
+        "category": "Grains"
+      }
+    ],
+    "honey": [
+      {
+        "name": "Raw Honey (kg)",
+        "rate": 250,
+        "quantity_per_unit": 1.05,
+        "wastage_percent": 2,
+        "category": "Natural Products"
+      }
+    ],
+    "tea-coffee": [
+      {
+        "name": "Tea Leaves (kg)",
+        "rate": 180,
+        "quantity_per_unit": 0.05,
+        "wastage_percent": 2,
+        "category": "Beverage Inputs"
+      }
+    ]
+  }
+}

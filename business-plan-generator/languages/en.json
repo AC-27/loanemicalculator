@@ -1,0 +1,83 @@
+{
+  "title": "Food Processing Business Plan Generator",
+  "labels": {
+    "businessName": "Business Name",
+    "selectBusiness": "-- Select --",
+    "businessType": "Business Type",
+    "productionCapacity": "Daily Production (kg/liters/packs)",
+    "sellingPrice": "Selling Price per Unit (₹)",
+    "machineryCost": "Machinery Cost (₹)",
+    "workingCapital": "Working Capital Contribution (%)",
+    "machineryLoan": "Machinery Loan (%)",
+    "date": "Date",
+    "dailyProduction": "Daily Production",
+    "units": "units"
+  },
+  "buttons": {
+    "generatePlan": "Generate Plan",
+    "downloadPdf": "Download PDF"
+  },
+  "businessTypes": {
+    "bakery": "Bakery",
+    "dairy": "Dairy Processing",
+    "pickles": "Pickles & Chutneys",
+    "puffed-rice": "Puffed Rice & Snacks"
+  },
+  "tables": {
+    "rawMaterials": "Raw Material Cost Breakdown",
+    "material": "Material",
+    "rate": "Rate",
+    "quantity": "Quantity",
+    "wastage": "Wastage",
+    "cost": "Cost",
+    "category": "Category",
+    "totalRawMaterialCost": "Total Raw Material Cost/Day",
+    "financialProjections": "Financial Projections",
+    "machineryCost": "Machinery Cost",
+    "workingCapital": "Working Capital (Monthly)",
+    "workingCapitalContribution": "Working Capital Contribution",
+    "workingCapitalLoan": "Working Capital Loan",
+    "machineryLoan": "Machinery Loan",
+    "ownContribution": "Own Contribution",
+    "totalInvestment": "Total Investment",
+    "breakEvenAnalysis": "Break-Even Analysis",
+    "profitLoss": "Profit/Loss Projections",
+    "metric": "Metric",
+    "daily": "Daily",
+    "monthly": "Monthly",
+    "annual": "Annual",
+    "revenue": "Revenue",
+    "totalCost": "Total Cost",
+    "profit": "Profit",
+    "loss": "Loss"
+  },
+  "explanations": {
+    "financialSummary": "Financial Summary",
+    "lossWarning": "Your business is projected to make a loss because:",
+    "costHigherThanRevenue": "Your costs are higher than revenue",
+    "dailyLoss": "Daily loss: ₹{amount}",
+    "considerOptions": "Consider these options:",
+    "increasePrice": "Increase selling price",
+    "reduceCosts": "Reduce raw material costs",
+    "increaseVolume": "Increase production volume",
+    "profitMessage": "Your business is projected to be profitable!",
+    "dailyProfit": "Daily profit: ₹{amount}",
+    "monthlyProfit": "Monthly profit: ₹{amount}",
+    "noBreakEven": "Cannot calculate break-even (business is not profitable)",
+    "breakEvenText": "You will recover your machinery investment in {days} days.",
+    "investmentBreakdown": "Investment Breakdown",
+    "machineryInvestment": "Machinery Investment: ₹{amount}",
+    "workingCapitalNeeded": "Working Capital Needed (1 month): ₹{amount}",
+    "totalInvestment": "Total Investment: ₹{amount}"
+  },
+  "errors": {
+    "businessNotFound": "Selected business not found. Please try another option.",
+    "requiredFields": "Please fill all required fields",
+    "invalidProduction": "Please enter valid production capacity",
+    "workingCapitalRange": "Working capital must be between {min}% and {max}%",
+    "machineryLoanRange": "Machinery loan must be between {min}% and {max}%",
+    "loadError": "Failed to load translations",
+    "dataLoadError": "Failed to load business data",
+    "calculationError": "Error generating business plan"
+  }
+}

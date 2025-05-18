@@ -1,0 +1,263 @@
+/* Main Layout Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styles */
+h1, h2, h3, h4 {
+  color: #2c3e50;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+  text-align: center;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: #2980b9;
+}
+
+h3 {
+  font-size: 1.4rem;
+  color: #16a085;
+}
+
+h4 {
+  font-size: 1.2rem;
+  color: #27ae60;
+}
+
+/* Form Styles */
+form {
+  margin-bottom: 30px;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 600;
+  color: #34495e;
+}
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0 20px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border 0.3s;
+}
+
+input:focus, select:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+/* Button Styles */
+button {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background 0.3s;
+  margin-top: 15px;
+  width: 100%;
+}
+
+button:hover {
+  background: #2980b9;
+}
+
+#download-pdf {
+  background: #27ae60;
+  margin-top: 30px;
+}
+
+#download-pdf:hover {
+  background: #219653;
+}
+
+/* Results Section */
+#results {
+  margin-top: 30px;
+  padding: 25px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: #f9f9f9;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 15px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #3498db;
+  color: white;
+  font-weight: 600;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Financial Highlight Styles */
+.profit-loss {
+  margin: 25px 0;
+  padding: 20px;
+  border-radius: 8px;
+  background: #f8f9fa;
+}
+
+.profit {
+  color: #27ae60;
+  font-weight: bold;
+}
+
+.loss {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+.warning {
+  color: #e74c3c;
+  font-weight: 600;
+}
+
+/* Explanation Box */
+.explanation-box {
+  background-color: #f1f8fe;
+  border-left: 4px solid #3498db;
+  padding: 20px;
+  margin: 25px 0;
+  border-radius: 6px;
+}
+
+.explanation-box ul {
+  padding-left: 20px;
+}
+
+.explanation-box li {
+  margin-bottom: 8px;
+}
+
+/* Language Selector */
+.language-selector {
+  text-align: right;
+  margin-bottom: 25px;
+}
+
+.language-selector select {
+  width: auto;
+  padding: 8px 12px;
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  input, select {
+    padding: 10px;
+    font-size: 15px;
+  }
+  
+  table {
+    font-size: 14px;
+  }
+  
+  th, td {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 15px;
+  }
+  
+  h1 {
+    font-size: 1.6rem;
+  }
+  
+  .language-selector select {
+    width: 100%;
+  }
+}
+
+/* Print Styles */
+@media print {
+  body {
+    background: none;
+    padding: 0;
+    font-size: 12pt;
+  }
+  
+  .container {
+    box-shadow: none;
+    padding: 0;
+    max-width: 100%;
+  }
+  
+  button, .language-selector {
+    display: none;
+  }
+  
+  #results {
+    border: none;
+    padding: 0;
+  }
+  
+  table {
+    page-break-inside: avoid;
+  }
+}

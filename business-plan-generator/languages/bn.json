@@ -1,0 +1,83 @@
+{
+  "title": "খাদ্য প্রক্রিয়াকরণ ব্যবসায় পরিকল্পনা জেনারেটর",
+  "labels": {
+    "businessName": "ব্যবসার নাম",
+    "selectBusiness": "-- নির্বাচন করুন --",
+    "businessType": "ব্যবসার ধরন",
+    "productionCapacity": "দৈনিক উৎপাদন (কেজি/লিটার/প্যাক)",
+    "sellingPrice": "প্রতি ইউনিট বিক্রয় মূল্য (₹)",
+    "machineryCost": "মেশিনারি খরচ (₹)",
+    "workingCapital": "কার্যকরী মূলধন অবদান (%)",
+    "machineryLoan": "মেশিনারি ঋণ (%)",
+    "date": "তারিখ",
+    "dailyProduction": "দৈনিক উৎপাদন",
+    "units": "ইউনিট"
+  },
+  "buttons": {
+    "generatePlan": "পরিকল্পনা তৈরি করুন",
+    "downloadPdf": "PDF ডাউনলোড করুন"
+  },
+  "businessTypes": {
+    "bakery": "বেকারি",
+    "dairy": "ডেইরি প্রক্রিয়াকরণ",
+    "pickles": "আচার ও চাটনি",
+    "puffed-rice": "মুড়ি ও নমকিন"
+  },
+  "tables": {
+    "rawMaterials": "কাঁচামাল খরচ বিবরণ",
+    "material": "পণ্য",
+    "rate": "দর",
+    "quantity": "পরিমাণ",
+    "wastage": "অপচয়",
+    "cost": "খরচ",
+    "category": "বিভাগ",
+    "totalRawMaterialCost": "মোট কাঁচামাল খরচ/দিন",
+    "financialProjections": "আর্থিক পূর্বাভাস",
+    "machineryCost": "মেশিনারি খরচ",
+    "workingCapital": "কার্যকরী মূলধন (মাসিক)",
+    "workingCapitalContribution": "কার্যকরী মূলধন অবদান",
+    "workingCapitalLoan": "কার্যকরী মূলধন ঋণ",
+    "machineryLoan": "মেশিনারি ঋণ",
+    "ownContribution": "নিজের অবদান",
+    "totalInvestment": "মোট বিনিয়োগ",
+    "breakEvenAnalysis": "ব্রেক-ইভেন বিশ্লেষণ",
+    "profitLoss": "লাভ/ক্ষতি পূর্বাভাস",
+    "metric": "মেট্রিক",
+    "daily": "দৈনিক",
+    "monthly": "মাসিক",
+    "annual": "বার্ষিক",
+    "revenue": "আয়",
+    "totalCost": "মোট খরচ",
+    "profit": "লাভ",
+    "loss": "ক্ষতি"
+  },
+  "explanations": {
+    "financialSummary": "আর্থিক সারাংশ",
+    "lossWarning": "আপনার ব্যবসায় ক্ষতির সম্মুখীন হবে কারণ:",
+    "costHigherThanRevenue": "আপনার খরচ আয়ের চেয়ে বেশি",
+    "dailyLoss": "দৈনিক ক্ষতি: ₹{amount}",
+    "considerOptions": "এই বিকল্পগুলি বিবেচনা করুন:",
+    "increasePrice": "বিক্রয় মূল্য বৃদ্ধি করুন",
+    "reduceCosts": "কাঁচামাল খরচ কমান",
+    "increaseVolume": "উৎপাদনের পরিমাণ বাড়ান",
+    "profitMessage": "আপনার ব্যবসায় লাভজনক হবে বলে পূর্বাভাস দেওয়া হয়েছে!",
+    "dailyProfit": "দৈনিক লাভ: ₹{amount}",
+    "monthlyProfit": "মাসিক লাভ: ₹{amount}",
+    "noBreakEven": "ব্রেক-ইভেন গণনা করা যাবে না (ব্যবসায় লাভজনক নয়)",
+    "breakEvenText": "আপনি {days} দিনে আপনার মেশিনারি বিনিয়োগ উদ্ধার করবেন।",
+    "investmentBreakdown": "বিনিয়োগ বিবরণ",
+    "machineryInvestment": "মেশিনারি বিনিয়োগ: ₹{amount}",
+    "workingCapitalNeeded": "প্রয়োজনীয় কার্যকরী মূলধন (১ মাস): ₹{amount}",
+    "totalInvestment": "মোট বিনিয়োগ: ₹{amount}"
+  },
+  "errors": {
+    "businessNotFound": "নির্বাচিত ব্যবসায় পাওয়া যায়নি। অনুগ্রহ করে অন্য বিকল্প চেষ্টা করুন।",
+    "requiredFields": "অনুগ্রহ করে সমস্ত প্রয়োজনীয় ক্ষেত্র পূরণ করুন",
+    "invalidProduction": "অনুগ্রহ করে বৈধ উৎপাদন ক্ষমতা প্রবেশ করান",
+    "workingCapitalRange": "কার্যকরী মূলধন {min}% এবং {max}% এর মধ্যে হতে হবে",
+    "machineryLoanRange": "মেশিনারি ঋণ {min}% এবং {max}% এর মধ্যে হতে হবে",
+    "loadError": "অনুবাদ লোড করতে ব্যর্থ",
+    "dataLoadError": "ব্যবসায় ডেটা লোড করতে ব্যর্থ",
+    "calculationError": "ব্যবসায় পরিকল্পনা তৈরি করতে ত্রুটি"
+  }
+}

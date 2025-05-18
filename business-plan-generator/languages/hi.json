@@ -1,0 +1,83 @@
+{
+  "title": "खाद्य प्रसंस्करण व्यवसाय योजना जनरेटर",
+  "labels": {
+    "businessName": "व्यवसाय का नाम",
+    "selectBusiness": "-- चुनें --",
+    "businessType": "व्यवसाय प्रकार",
+    "productionCapacity": "दैनिक उत्पादन (किलो/लीटर/पैक)",
+    "sellingPrice": "प्रति यूनिट विक्रय मूल्य (₹)",
+    "machineryCost": "मशीनरी लागत (₹)",
+    "workingCapital": "कार्यशील पूंजी योगदान (%)",
+    "machineryLoan": "मशीनरी ऋण (%)",
+    "date": "तारीख",
+    "dailyProduction": "दैनिक उत्पादन",
+    "units": "यूनिट"
+  },
+  "buttons": {
+    "generatePlan": "योजना बनाएं",
+    "downloadPdf": "PDF डाउनलोड करें"
+  },
+  "businessTypes": {
+    "bakery": "बेकरी",
+    "dairy": "डेयरी प्रसंस्करण",
+    "pickles": "अचार और चटनी",
+    "puffed-rice": "मुरमुरे और नमकीन"
+  },
+  "tables": {
+    "rawMaterials": "कच्चे माल की लागत विवरण",
+    "material": "सामग्री",
+    "rate": "दर",
+    "quantity": "मात्रा",
+    "wastage": "बर्बादी",
+    "cost": "लागत",
+    "category": "श्रेणी",
+    "totalRawMaterialCost": "कुल कच्चा माल लागत/दिन",
+    "financialProjections": "वित्तीय अनुमान",
+    "machineryCost": "मशीनरी लागत",
+    "workingCapital": "कार्यशील पूंजी (मासिक)",
+    "workingCapitalContribution": "कार्यशील पूंजी योगदान",
+    "workingCapitalLoan": "कार्यशील पूंजी ऋण",
+    "machineryLoan": "मशीनरी ऋण",
+    "ownContribution": "स्वयं का योगदान",
+    "totalInvestment": "कुल निवेश",
+    "breakEvenAnalysis": "ब्रेक-ईवन विश्लेषण",
+    "profitLoss": "लाभ/हानि अनुमान",
+    "metric": "मापदंड",
+    "daily": "दैनिक",
+    "monthly": "मासिक",
+    "annual": "वार्षिक",
+    "revenue": "राजस्व",
+    "totalCost": "कुल लागत",
+    "profit": "लाभ",
+    "loss": "हानि"
+  },
+  "explanations": {
+    "financialSummary": "वित्तीय सारांश",
+    "lossWarning": "आपके व्यवसाय को हानि होने का अनुमान है क्योंकि:",
+    "costHigherThanRevenue": "आपकी लागत राजस्व से अधिक है",
+    "dailyLoss": "दैनिक हानि: ₹{amount}",
+    "considerOptions": "इन विकल्पों पर विचार करें:",
+    "increasePrice": "विक्रय मूल्य बढ़ाएं",
+    "reduceCosts": "कच्चे माल की लागत कम करें",
+    "increaseVolume": "उत्पादन मात्रा बढ़ाएं",
+    "profitMessage": "आपके व्यवसाय को लाभदायक होने का अनुमान है!",
+    "dailyProfit": "दैनिक लाभ: ₹{amount}",
+    "monthlyProfit": "मासिक लाभ: ₹{amount}",
+    "noBreakEven": "ब्रेक-ईवन की गणना नहीं की जा सकती (व्यवसाय लाभदायक नहीं है)",
+    "breakEvenText": "आप {days} दिनों में अपना मशीनरी निवेश वसूल कर लेंगे।",
+    "investmentBreakdown": "निवेश विवरण",
+    "machineryInvestment": "मशीनरी निवेश: ₹{amount}",
+    "workingCapitalNeeded": "आवश्यक कार्यशील पूंजी (1 महीना): ₹{amount}",
+    "totalInvestment": "कुल निवेश: ₹{amount}"
+  },
+  "errors": {
+    "businessNotFound": "चयनित व्यवसाय नहीं मिला। कृपया कोई अन्य विकल्प चुनें।",
+    "requiredFields": "कृपया सभी आवश्यक फ़ील्ड भरें",
+    "invalidProduction": "कृपया वैध उत्पादन क्षमता दर्ज करें",
+    "workingCapitalRange": "कार्यशील पूंजी {min}% और {max}% के बीच होनी चाहिए",
+    "machineryLoanRange": "मशीनरी ऋण {min}% और {max}% के बीच होना चाहिए",
+    "loadError": "अनुवाद लोड करने में विफल",
+    "dataLoadError": "व्यवसाय डेटा लोड करने में विफल",
+    "calculationError": "व्यवसाय योजना बनाने में त्रुटि"
+  }
+}

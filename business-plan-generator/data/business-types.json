@@ -1,0 +1,106 @@
+{
+  "businesses": [
+    {
+      "id": "bakery",
+      "name": "Bakery Products",
+      "description": "Manufacturing of bread, biscuits, cakes, and other bakery items",
+      "category": "Processed Foods"
+    },
+    {
+      "id": "dairy",
+      "name": "Dairy Processing",
+      "description": "Milk processing, cheese, yogurt, paneer, and other dairy products",
+      "category": "Dairy"
+    },
+    {
+      "id": "pickles",
+      "name": "Pickles & Chutneys",
+      "description": "Traditional Indian pickles, chutneys, and sauces",
+      "category": "Processed Foods"
+    },
+    {
+      "id": "puffed-rice",
+      "name": "Puffed Rice & Snacks",
+      "description": "Murmura, chivda, and other puffed rice products",
+      "category": "Snack Foods"
+    },
+    {
+      "id": "fruits-veg",
+      "name": "Fruits & Vegetables Processing",
+      "description": "Pickles, sauces, jams, purees, and dehydrated products",
+      "category": "Processed Foods"
+    },
+    {
+      "id": "meat",
+      "name": "Meat & Poultry Processing",
+      "description": "Processed meat products, sausages, and ready-to-cook items",
+      "category": "Animal Products"
+    },
+    {
+      "id": "fish",
+      "name": "Fish Processing",
+      "description": "Frozen fish, fish oil, canned fish, and value-added products",
+      "category": "Animal Products"
+    },
+    {
+      "id": "flour-mill",
+      "name": "Flour Mill",
+      "description": "Wheat flour, rice flour, and other grain milling operations",
+      "category": "Grain Processing"
+    },
+    {
+      "id": "snacks",
+      "name": "Snacks & Namkeens",
+      "description": "Chips, extruded snacks, traditional Indian namkeens",
+      "category": "Processed Foods"
+    },
+    {
+      "id": "beverages",
+      "name": "Beverages",
+      "description": "Fruit juices, carbonated drinks, and health beverages",
+      "category": "Liquid Products"
+    },
+    {
+      "id": "spices",
+      "name": "Spices Processing",
+      "description": "Grinding, blending, and packaging of spices and masalas",
+      "category": "Value Addition"
+    },
+    {
+      "id": "oil",
+      "name": "Edible Oil Processing",
+      "description": "Extraction and refining of vegetable oils",
+      "category": "Oil & Fats"
+    },
+    {
+      "id": "sweets",
+      "name": "Traditional Sweets",
+      "description": "Mithai, halwa, and other traditional Indian sweets",
+      "category": "Confectionery"
+    },
+    {
+      "id": "organic",
+      "name": "Organic Food Processing",
+      "description": "Processing of certified organic food products",
+      "category": "Specialty Foods"
+    },
+    {
+      "id": "ready-to-eat",
+      "name": "Ready-to-Eat Foods",
+      "description": "Instant mixes, ready meals, and convenience foods",
+      "category": "Processed Foods"
+    },
+    {
+      "id": "honey",
+      "name": "Honey Processing",
+      "description": "Filtering, bottling, and value-added honey products",
+      "category": "Natural Products"
+    },
+    {
+      "id": "tea-coffee",
+      "name": "Tea & Coffee Processing",
+      "description": "Blending, flavoring, and packaging of tea and coffee",
+      "category": "Beverages"
+    }
+  ]
+}

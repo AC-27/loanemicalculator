@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Processing Business Plan Generator</title>
+  <link rel="stylesheet" href="bpg.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="language-selector">
+      <select id="language-selector">
+        <option value="en">English</option>
+        <option value="hi">हिंदी</option>
+        <option value="bn">বাংলা</option>
+        <option value="as">অসমীয়া</option>
+      </select>
+    </div>
+    
+    <h1 id="title">Food Processing Business Plan Generator</h1>
+    
+    <form id="business-form">
+      <!-- Basic Details -->
+      <label for="business-name" id="lbl-business-name">Business Name:</label>
+      <input type="text" id="business-name" required>
+
+      <label for="business-type" id="lbl-business-type">Select Food Business:</label>
+      <select id="business-type" required>
+        <option value="">-- Select --</option>
+        <!-- Loaded dynamically -->
+      </select>
+
+      <label for="production-capacity" id="lbl-production-capacity">Daily Production (kg/liters/packs):</label>
+      <input type="number" id="production-capacity" required min="1">
+
+      <label for="selling-price" id="lbl-selling-price">Selling Price per Unit (₹):</label>
+      <input type="number" id="selling-price" required min="1">
+
+      <label for="machinery-cost" id="lbl-machinery-cost">Machinery Cost (₹):</label>
+      <input type="number" id="machinery-cost" required min="10000">
+
+      <label for="working-capital-percent" id="lbl-working-capital">Working Capital Contribution (%):</label>
+      <input type="number" id="working-capital-percent" value="30" min="30" max="100">
+
+      <label for="machinery-loan-percent" id="lbl-machinery-loan">Machinery Loan (%):</label>
+      <input type="number" id="machinery-loan-percent" value="70" min="10" max="100">
+
+      <button type="button" id="generate-plan">Generate Plan</button>
+    </form>
+
+    <!-- Results Section -->
+    <div id="results" class="hidden">
+      <h2 id="results-title">Your Business Plan</h2>
+      <div id="dpr-output"></div>
+      <div id="financial-explanation" class="explanation-box"></div>
+      <button id="download-pdf">Download as PDF</button>
+    </div>
+  </div>
+  
+  <script src="bpg.js"></script>
+</body>
+</html>

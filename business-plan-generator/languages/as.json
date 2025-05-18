@@ -1,0 +1,83 @@
+{
+  "title": "খাদ্য প্ৰসংস্কৰণ ব্যৱসায় পৰিকল্পনা জেনেৰেটৰ",
+  "labels": {
+    "businessName": "ব্যৱসায়ৰ নাম",
+    "selectBusiness": "-- নিৰ্বাচন কৰক --",
+    "businessType": "ব্যৱসায়ৰ প্ৰকাৰ",
+    "productionCapacity": "দৈনিক উৎপাদন (কিলোগ্ৰাম/লিটাৰ/পেক)",
+    "sellingPrice": "প্ৰতি একক বিক্ৰী মূল্য (₹)",
+    "machineryCost": "যন্ত্ৰপাতিৰ খৰচ (₹)",
+    "workingCapital": "কাৰ্যকৰী মূলধন অৱদান (%)",
+    "machineryLoan": "যন্ত্ৰপাতি ঋণ (%)",
+    "date": "তাৰিখ",
+    "dailyProduction": "দৈনিক উৎপাদন",
+    "units": "একক"
+  },
+  "buttons": {
+    "generatePlan": "পৰিকল্পনা সৃষ্টি কৰক",
+    "downloadPdf": "PDF ডাউনলোড কৰক"
+  },
+  "businessTypes": {
+    "bakery": "বেকাৰী",
+    "dairy": "গাখীৰ প্ৰসংস্কৰণ",
+    "pickles": "আচাৰ আৰু চাটনি",
+    "puffed-rice": "মুৰি আৰু নিমখীন"
+  },
+  "tables": {
+    "rawMaterials": "কেঁচামালৰ খৰচৰ বিৱৰণ",
+    "material": "সামগ্ৰী",
+    "rate": "হাৰ",
+    "quantity": "পৰিমাণ",
+    "wastage": "অপচয়",
+    "cost": "খৰচ",
+    "category": "শ্ৰেণী",
+    "totalRawMaterialCost": "মুঠ কেঁচামাল খৰচ/দিন",
+    "financialProjections": "অৰ্থনৈতিক প্ৰকল্প",
+    "machineryCost": "যন্ত্ৰপাতিৰ খৰচ",
+    "workingCapital": "কাৰ্যকৰী মূলধন (মাহেকীয়া)",
+    "workingCapitalContribution": "কাৰ্যকৰী মূলধন অৱদান",
+    "workingCapitalLoan": "কাৰ্যকৰী মূলধন ঋণ",
+    "machineryLoan": "যন্ত্ৰপাতি ঋণ",
+    "ownContribution": "নিজৰ অৱদান",
+    "totalInvestment": "মুঠ বিনিয়োগ",
+    "breakEvenAnalysis": "ব্ৰেক-ইভেন বিশ্লেষণ",
+    "profitLoss": "লাভ/লোকচান প্ৰকল্প",
+    "metric": "মাপকাঠি",
+    "daily": "দৈনিক",
+    "monthly": "মাহেকীয়া",
+    "annual": "বাৰ্ষিক",
+    "revenue": "আয়",
+    "totalCost": "মুঠ খৰচ",
+    "profit": "লাভ",
+    "loss": "লোকচান"
+  },
+  "explanations": {
+    "financialSummary": "অৰ্থনৈতিক সাৰাংশ",
+    "lossWarning": "আপোনাৰ ব্যৱসায়ৰ লোকচান হ'ব বুলি অনুমান কৰা হৈছে কাৰণ:",
+    "costHigherThanRevenue": "আপোনাৰ খৰচ আয়তকৈ বেছি",
+    "dailyLoss": "দৈনিক লোকচান: ₹{amount}",
+    "considerOptions": "এই বিকল্পবোৰ বিবেচনা কৰক:",
+    "increasePrice": "বিক্ৰী মূল্য বৃদ্ধি কৰক",
+    "reduceCosts": "কেঁচামালৰ খৰচ হ্ৰাস কৰক",
+    "increaseVolume": "উৎপাদনৰ পৰিমাণ বৃদ্ধি কৰক",
+    "profitMessage": "আপোনাৰ ব্যৱসায় লাভজনক হ'ব বুলি অনুমান কৰা হৈছে!",
+    "dailyProfit": "দৈনিক লাভ: ₹{amount}",
+    "monthlyProfit": "মাহেকীয়া লাভ: ₹{amount}",
+    "noBreakEven": "ব্ৰেক-ইভেন গণনা কৰিব নোৱাৰি (ব্যৱসায় লাভজনক নহয়)",
+    "breakEvenText": "আপুনি {days} দিনত আপোনাৰ যন্ত্ৰপাতিৰ বিনিয়োগ উদ্ধাৰ কৰিব।",
+    "investmentBreakdown": "বিনিয়োগৰ বিৱৰণ",
+    "machineryInvestment": "যন্ত্ৰপাতিৰ বিনিয়োগ: ₹{amount}",
+    "workingCapitalNeeded": "প্ৰয়োজনীয় কাৰ্যকৰী মূলধন (১ মাহ): ₹{amount}",
+    "totalInvestment": "মুঠ বিনিয়োগ: ₹{amount}"
+  },
+  "errors": {
+    "businessNotFound": "নিৰ্বাচিত ব্যৱসায় পোৱা নগ'ল। অনুগ্ৰহ কৰি অন্য বিকল্প চেষ্টা কৰক।",
+    "requiredFields": "অনুগ্ৰহ কৰি সকলো প্ৰয়োজনীয় ক্ষেত্ৰ পূৰণ কৰক",
+    "invalidProduction": "অনুগ্ৰহ কৰি বৈধ উৎপাদন ক্ষমতা প্ৰৱেশ কৰক",
+    "workingCapitalRange": "কাৰ্যকৰী মূলধন {min}% আৰু {max}%ৰ মাজত হ'ব লাগিব",
+    "machineryLoanRange": "যন্ত্ৰপাতি ঋণ {min}% আৰু {max}%ৰ মাজত হ'ব লাগিব",
+    "loadError": "অনুবাদ ল'ড কৰিবলৈ ব্যৰ্থ",
+    "dataLoadError": "ব্যৱসায় ডাটা ল'ড কৰিবলৈ ব্যৰ্থ",
+    "calculationError": "ব্যৱসায় পৰিকল্পনা সৃষ্টি কৰোতে ত্ৰুটি"
+  }
+}
