@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuel vs EV Cost Comparison Calculator</title>
+    <meta name="description" content="Compare costs between petrol/diesel cars and electric vehicles">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Fuel vs EV Cost Comparison Calculator</h1>
+            <p>Compare the total cost of ownership between traditional fuel vehicles and electric vehicles</p>
+        </header>
+        
+        <div class="calculator-container">
+            <div class="input-section">
+                <h2>Your Driving Details</h2>
+                
+                <div class="form-group">
+                    <label for="distance">Daily Driving Distance (km)</label>
+                    <input type="number" id="distance" value="50" min="1">
+                </div>
+                
+                <div class="form-group">
+                    <label for="days">Driving Days Per Week</label>
+                    <input type="number" id="days" value="5" min="1" max="7">
+                </div>
+                
+                <div class="form-group">
+                    <label for="years">Years to Compare</label>
+                    <input type="number" id="years" value="5" min="1" max="20">
+                </div>
+                
+                <h2>Fuel Vehicle Details</h2>
+                
+                <div class="form-group">
+                    <label for="fuelType">Fuel Type</label>
+                    <select id="fuelType">
+                        <option value="petrol">Petrol</option>
+                        <option value="diesel">Diesel</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="fuelPrice">Fuel Price (per liter)</label>
+                    <input type="number" id="fuelPrice" value="100" min="1" step="0.1">
+                </div>
+                
+                <div class="form-group">
+                    <label for="fuelEfficiency">Fuel Efficiency (km per liter)</label>
+                    <input type="number" id="fuelEfficiency" value="15" min="1" step="0.1">
+                </div>
+                
+                <div class="form-group">
+                    <label for="fuelCarPrice">Vehicle Price (₹)</label>
+                    <input type="number" id="fuelCarPrice" value="800000" min="0">
+                </div>
+                
+                <div class="form-group">
+                    <label for="fuelMaintenance">Annual Maintenance Cost (₹)</label>
+                    <input type="number" id="fuelMaintenance" value="15000" min="0">
+                </div>
+                
+                <h2>Electric Vehicle Details</h2>
+                
+                <div class="form-group">
+                    <label for="electricityPrice">Electricity Price (per kWh)</label>
+                    <input type="number" id="electricityPrice" value="8" min="0" step="0.1">
+                </div>
+                
+                <div class="form-group">
+                    <label for="evEfficiency">EV Efficiency (km per kWh)</label>
+                    <input type="number" id="evEfficiency" value="8" min="1" step="0.1">
+                </div>
+                
+                <div class="form-group">
+                    <label for="evCarPrice">EV Price (₹)</label>
+                    <input type="number" id="evCarPrice" value="1200000" min="0">
+                </div>
+                
+                <div class="form-group">
+                    <label for="evMaintenance">Annual Maintenance Cost (₹)</label>
+                    <input type="number" id="evMaintenance" value="5000" min="0">
+                </div>
+                
+                <div class="form-group">
+                    <label for="batteryReplacement">Battery Replacement Cost (after 8 years, ₹)</label>
+                    <input type="number" id="batteryReplacement" value="150000" min="0">
+                </div>
+                
+                <div class="form-group">
+                    <label for="subsidy">EV Subsidy/Discount (₹)</label>
+                    <input type="number" id="subsidy" value="150000" min="0">
+                </div>
+                
+                <div class="button-group">
+                    <button id="calculateBtn">Calculate Comparison</button>
+                    <button id="resetBtn" class="reset-btn">Reset</button>
+                </div>
+            </div>
+            
+            <div class="results-section">
+                <div id="results" style="display: none;">
+                    <div class="savings-highlight">
+                        <div class="savings-title">Your Potential Savings</div>
+                        <div id="savingsText"></div>
+                    </div>
+                    
+                    <div class="recommendation">
+                        <div class="recommendation-title">Our Recommendation</div>
+                        <div id="recommendationText"></div>
+                    </div>
+                    
+                    <div class="result-card">
+                        <div class="result-title">Cost Comparison Summary</div>
+                        <table class="comparison-table">
+                            <thead>
+                                <tr>
+                                    <th>Parameter</th>
+                                    <th id="fuelHeader">Petrol Vehicle</th>
+                                    <th>Electric Vehicle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Annual Fuel/Electricity Cost</td>
+                                    <td id="annualFuelCost">₹0</td>
+                                    <td id="annualEvCost">₹0</td>
+                                </tr>
+                                <tr>
+                                    <td>Annual Maintenance Cost</td>
+                                    <td id="annualFuelMaintenance">₹0</td>
+                                    <td id="annualEvMaintenance">₹0</td>
+                                </tr>
+                                <tr>
+                                    <td>Total <span id="yearsText">5</span>-Year Fuel/Electricity Cost</td>
+                                    <td id="totalFuelCost">₹0</td>
+                                    <td id="totalEvCost">₹0</td>
+                                </tr>
+                                <tr>
+                                    <td>Total <span id="yearsText2">5</span>-Year Maintenance Cost</td>
+                                    <td id="totalFuelMaintenance">₹0</td>
+                                    <td id="totalEvMaintenance">₹0</td>
+                                </tr>
+                                <tr>
+                                    <td>Vehicle Price</td>
+                                    <td id="fuelVehiclePrice">₹0</td>
+                                    <td id="evVehiclePrice">₹0</td>
+                                </tr>
+                                <tr>
+                                    <td>Battery Replacement Cost</td>
+                                    <td>₹0</td>
+                                    <td id="batteryCost">₹0</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Total <span id="yearsText3">5</span>-Year Cost</strong></td>
+                                    <td id="totalFuelExpense"><strong>₹0</strong></td>
+                                    <td id="totalEvExpense"><strong>₹0</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="result-card">
+                        <div class="result-title">Annual Cost Breakdown</div>
+                        <div class="chart-container">
+                            <canvas id="annualCostChart"></canvas>
+                        </div>
+                    </div>
+                    
+                    <div class="result-card">
+                        <div class="result-title">Cumulative Cost Over Time</div>
+                        <div class="chart-container">
+                            <canvas id="cumulativeCostChart"></canvas>
+                        </div>
+                    </div>
+                    
+                    <div class="result-card">
+                        <div class="result-title">Environmental Impact</div>
+                        <table class="comparison-table">
+                            <thead>
+                                <tr>
+                                    <th>Metric</th>
+                                    <th id="fuelHeader2">Petrol Vehicle</th>
+                                    <th>Electric Vehicle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>CO2 Emissions (kg/year)*</td>
+                                    <td id="fuelEmissions">0</td>
+                                    <td id="evEmissions">0</td>
+                                </tr>
+                                <tr>
+                                    <td>Particulate Matter Emissions</td>
+                                    <td>High</td>
+                                    <td>None</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p style="margin-top: 10px; font-size: 14px; color: #6c757d;">*Based on average emissions factors. Actual emissions may vary based on electricity source.</p>
+                    </div>
+                </div>
+                
+                <div id="initialMessage">
+                    <h2>See How Much You Can Save With an EV</h2>
+                    <p>Fill in your driving details and vehicle information on the left, then click "Calculate Comparison" to see a detailed breakdown of costs between fuel vehicles and electric vehicles.</p>
+                    <p>The calculator will show you:</p>
+                    <ul>
+                        <li>Annual and total cost comparisons</li>
+                        <li>Break-even point for EV ownership</li>
+                        <li>Environmental impact differences</li>
+                        <li>Personalized recommendation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
